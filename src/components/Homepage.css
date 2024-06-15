@@ -1,0 +1,47 @@
+.About-us-section{
+    padding: 40px 0;
+}
+.About-us-section .row{
+    display: flex;
+    align-items: center;
+}
+.about-home-content h2{
+    font-weight: 600;
+}
+.about-home-content h2{
+    font-weight: 600;
+    color: #FF4500;
+}
+.about-home img {
+    width: 2000px;
+}
+.featured-section{
+    padding: 40px;
+    background-color: rgb(235, 240, 244);
+}
+.featured-section .featured-heading h2{
+    font-weight: 600;
+    text-align: center;
+}
+.featured-section .featured-heading p{
+    font-weight: 600;
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #FF4500;
+}
+.featured-card{
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+.card-Image {
+    border-radius: 8px 8px 0px 0px;
+
+}
+.featured-card .card-body{
+    padding: 20px;
+    text-align: center;
+}
+.featured-card .card-body h5{
+    font-weight: 600;
+}

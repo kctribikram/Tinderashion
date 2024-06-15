@@ -1,17 +1,23 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
+import Homepage from './components/Homepage.jsx';
+import MensClothing from './components/MensClothing.jsx';
+import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
 const App = () => {
   return (
-    <div className="App">
+    <Router>
       <Navbar />
-      <main>
-        {/* Other components or content here */}
-      </main>
+      <Routes>
+        <Route exact path="/" element={<Homepage />} />
+        <Route path="/mens-clothing" element={<MensClothing />} /> {/* Updated path */}
+        {/* Add other routes as needed */}
+      </Routes>
       <Footer />
-    </div>
+    </Router>
   );
 };
 

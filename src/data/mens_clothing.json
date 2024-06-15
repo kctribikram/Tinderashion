@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "name": "Men's T-Shirt",
+    "price": 19.99,
+    "size": ["S", "M", "L", "XL"],
+    "color": ["Blue", "Gray", "Green"],
+    "image": "/images/a.jpeg"
+    },
+    {
+      "id": 2,
+      "name": "Men's Jeans",
+      "price": 39.99,
+      "size": ["30", "32", "34", "36"],
+      "color": ["Gray", "Blue", "Black"],
+      "image": "/images/men-fashion.jpeg"
+  },
+  {
+    "id": 3,
+    "name": "Men's Jacket",
+    "price": 59.99,
+    "size": ["S", "M", "L", "XL"],
+    "color": ["Green", "Black", "Red"],
+    "image": "/images/men-fashion.jpeg"
+  },
+  {
+    "id": 4,
+    "name": "Men's Shoes",
+    "price": 49.99,
+    "size": ["8", "9", "10", "11"],
+    "color": ["Red", "Blue", "Brown"],
+    "image": "/images/men-fashion.jpeg"
+  },
+  {
+    "id": 5,
+    "name": "Men's Polo Shirt",
+    "price": 25.99,
+    "size": ["S", "M", "L", "XL"],
+    "color": ["Yellow", "Blue", "White"],
+    "image": "/images/men-fashion.jpeg"
+  },
+  {
+    "id": 6,
+    "name": "Men's Sweatshirt",
+    "price": 35.99,
+    "size": ["S", "M", "L", "XL"],
+    "color": ["Gray", "Black", "Navy"],
+    "image": "/images/men-fashion.jpeg"
+  },
+  {
+    "id": 7,
+    "name": "Men's Shorts",
+    "price": 29.99,
+    "size": ["S", "M", "L", "XL"],
+    "color": ["Khaki", "Blue", "Gray"],
+    "image": "/images/men-fashion.jpeg"
+  },
+  {
+    "id": 8,
+    "name": "Men's Suit",
+    "price": 199.99,
+    "size": ["S", "M", "L", "XL"],
+    "color": ["Black", "Gray", "Navy"],
+    "image": "/images/men-fashion.jpeg"
+  },
+  {
+    "id": 9,
+    "name": "Men's Blazer",
+    "price": 89.99,
+    "size": ["S", "M", "L", "XL"],
+    "color": ["Blue", "Black", "Gray"],
+    "image": "/images/men-fashion.jpeg"
+  },
+  {
+    "id": 10,
+    "name": "Men's Sweater",
+    "price": 45.99,
+    "size": ["S", "M", "L", "XL"],
+    "color": ["Red", "Gray", "Black"],
+    "image": "/images/men-fashion.jpeg"
+  },
+  {
+    "id": 11,
+    "name": "Men's Track Pants",
+    "price": 39.99,
+    "size": ["S", "M", "L", "XL"],
+    "color": ["Black", "Gray", "Blue"],
+    "image": "/images/men-fashion.jpeg"
+  },
+  {
+    "id": 12,
+    "name": "Men's Hoodie",
+    "price": 49.99,
+    "size": ["S", "M", "L", "XL"],
+    "color": ["Red", "Black", "White"],
+    "image": "/images/men-fashion.jpeg"
+  },
+  {
+    "id": 13,
+    "name": "Men's Tank Top",
+    "price": 15.99,
+    "size": ["S", "M", "L", "XL"],
+    "color": ["Blue", "White", "Gray"],
+    "image": "/images/men-fashion.jpeg"
+  },
+  {
+    "id": 14,
+    "name": "Men's Vest",
+    "price": 29.99,
+    "size": ["S", "M", "L", "XL"],
+    "color": ["Green", "Gray", "Black"],
+    "image": "/images/men-fashion.jpeg"
+  },
+  {
+    "id": 15,
+    "name": "Men's Chinos",
+    "price": 49.99,
+    "size": ["30", "32", "34", "36"],
+    "color": ["Beige", "Navy", "Black"],
+    "image": "/images/men-fashion.jpeg"
+  },
+  {
+    "id": 16,
+    "name": "Men's Dress Shirt",
+    "price": 39.99,
+    "size": ["S", "M", "L", "XL"],
+    "color": ["White", "Blue", "Gray"],
+    "image": "/images/men-fashion.jpeg"
+  },
+  {
+    "id": 17,
+    "name": "Men's Socks",
+    "price": 9.99,
+    "size": ["One Size"],
+    "color": ["Black", "Gray", "White"],
+    "image": "/images/men-fashion.jpeg"
+  },
+  {
+    "id": 18,
+    "name": "Men's Hat",
+    "price": 19.99,
+    "size": ["One Size"],
+    "color": ["Blue", "Black", "Red"],
+    "image": "/images/men-fashion.jpeg"
+  },
+  {
+    "id": 19,
+    "name": "Men's Belt",
+    "price": 29.99,
+    "size": ["S", "M", "L", "XL"],
+    "color": ["Black", "Brown", "Gray"],
+    "image": "/images/men-fashion.jpeg"
+  },
+  {
+    "id": 20,
+    "name": "Men's Gloves",
+    "price": 19.99,
+    "size": ["S", "M", "L", "XL"],
+    "color": ["Black", "Gray", "Navy"],
+    "image": "/images/men-fashion.jpeg"
+  }
+]
