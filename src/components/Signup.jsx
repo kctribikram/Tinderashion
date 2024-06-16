@@ -1,14 +1,14 @@
 import React from 'react';
 import './Login.css';
-import { Link } from 'react-router-dom';
 
-function Login() {
+function Signup() {
   return (
+    
     <section className="ftco-section">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-md-6 text-center mb-5">
-            <h2 className="heading-section">Login Page</h2>
+            <h2 className="heading-section">Signup Page</h2>
           </div>
         </div>
         <div className="row justify-content-center">
@@ -34,6 +34,14 @@ function Login() {
                 <form action="#" className="signin-form">
                   <div className="form-group mt-3">
                     <input type="text" className="form-control" required/>
+                    <label className="form-control-placeholder" htmlFor="fname">First Name</label>
+                  </div>
+                  <div className="form-group mt-3">
+                    <input type="text" className="form-control" required/>
+                    <label className="form-control-placeholder" htmlFor="lname">Last Name</label>
+                  </div>
+                  <div className="form-group mt-3">
+                    <input type="text" className="form-control" required/>
                     <label className="form-control-placeholder" htmlFor="username">Username</label>
                   </div>
                   <div className="form-group">
@@ -42,28 +50,16 @@ function Login() {
                     <span toggle="#password-field" className="fa fa-fw fa-eye field-icon toggle-password"></span>
                   </div>
                   <div className="form-group">
-                    <button type="submit" className="form-control btn btn-primary rounded submit px-3">Sign In</button>
-                  </div>
-                  <div className="form-group d-md-flex">
-                    <div className="w-50 text-left">
-                      <label className="checkbox-wrap checkbox-primary mb-0">Remember Me
-                        <input type="checkbox" defaultChecked/>
-                        <span className="checkmark"></span>
-                      </label>
-                    </div>
-                    <div className="w-50 text-md-right">
-                      <a href="#">Forgot Password</a>
-                    </div>
+                    <button type="submit" className="form-control btn btn-primary rounded submit px-3">Sign Up</button>
                   </div>
                 </form>
-                <p className="text-center">Not a member? <Link to="/signup">Sign Up</Link></p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-  );
+  )
 }
 
-export default Login;
+export default Signup

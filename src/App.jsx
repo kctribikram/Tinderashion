@@ -7,6 +7,7 @@ import MensClothing from './components/MensClothing.jsx';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import Login from './components/Login.jsx';
+import Signup from './components/Signup.jsx';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route exact path="/" element={<Homepage />} />
         <Route path="/mens-clothing" element={<MensClothing />} /> 
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
       </Routes>
       <Footer />
     </Router>
