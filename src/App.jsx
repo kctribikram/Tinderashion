@@ -6,6 +6,7 @@ import Homepage from './components/Homepage.jsx';
 import MensClothing from './components/MensClothing.jsx';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
+import Login from './components/Login.jsx';
 
 const App = () => {
   return (
@@ -13,8 +14,8 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Homepage />} />
-        <Route path="/mens-clothing" element={<MensClothing />} /> {/* Updated path */}
-        {/* Add other routes as needed */}
+        <Route path="/mens-clothing" element={<MensClothing />} /> 
+        <Route path="/login" element={<Login />} />
       </Routes>
       <Footer />
     </Router>
