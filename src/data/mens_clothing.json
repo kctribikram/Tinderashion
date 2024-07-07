@@ -4,8 +4,8 @@
     "name": "Men's T-Shirt",
     "price": 19.99,
     "size": ["S", "M", "L", "XL"],
-    "color": ["Blue", "Gray", "Green"],
-    "image": "/images/a.jpeg"
+    "color": ["Blue", "Gray","White", "Green"],
+    "image": "/images/men tshirt.jpg"
     },
     {
       "id": 2,
@@ -13,7 +13,7 @@
       "price": 39.99,
       "size": ["30", "32", "34", "36"],
       "color": ["Gray", "Blue", "Black"],
-      "image": "/images/men-fashion.jpeg"
+      "image": "/images/men jeans.jpg"
   },
   {
     "id": 3,

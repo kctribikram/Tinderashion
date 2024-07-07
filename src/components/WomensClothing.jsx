@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useSwipeable } from 'react-swipeable';
-import './MensClothing.css';
-import data from '../data/mens_clothing.json';
+import './WomensClothing.css';
+import data from '../data/womens_clothing.json';
 import 'rc-slider/assets/index.css';
 import Slider from 'rc-slider';
 
-const MensClothing = ({ cart, setCart }) => {
+const WomensClothing = ({ cart, setCart }) => {
   const [index, setIndex] = useState(0);
   const [filteredData, setFilteredData] = useState(data);
   const [filters, setFilters] = useState({ price: 100, sizes: [], colors: [] });
@@ -62,8 +62,8 @@ const MensClothing = ({ cart, setCart }) => {
   });
 
   return (
-    <div className="mens-clothing">
-      <h1>Men's Clothing</h1>
+    <div className="womens-clothing">
+      <h1>Women's Clothing</h1>
       <div className="content">
         <button className="filter-toggle" onClick={() => setIsFilterOpen(!isFilterOpen)}>
           {isFilterOpen ? 'Hide Filters' : 'Sort / Filter'}
@@ -141,4 +141,4 @@ const MensClothing = ({ cart, setCart }) => {
   );
 };
 
-export default MensClothing;
+export default WomensClothing;
