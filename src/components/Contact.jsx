@@ -8,7 +8,7 @@ function Contact() {
       <div className="banner">
         <div className="banner-content">
           <h1>Get In Touch</h1>
-          <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
+          <p>We would love to hear from you. Whether you have a question about features, trials, pricing, need a demo, or anything else, our team is ready to answer all your questions.</p>
         </div>
       </div>
       <div className="contact-container">
@@ -30,7 +30,7 @@ function Contact() {
             <p>(800) 900-200-300</p>
             <p><a href="mailto:info@company.com">info@company.com</a></p>
             <div className="social-icons">
-              <a href="#"><i className="fab fa-twitter"></i></a>
+              <a href="#"><i className="fa-brands fa-instagram"></i></a>
               <a href="#"><i className="fab fa-linkedin"></i></a>
               <a href="#"><i className="fab fa-instagram"></i></a>
             </div>
