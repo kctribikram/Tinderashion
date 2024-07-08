@@ -36,10 +36,6 @@ body {
   flex: 1;
 }
 
-.contact-page .contact-form {
-  /* background: #f4f7f6; */
-}
-
 .contact-page .contact-info {
   background: linear-gradient(to right, #0077cc, #0055aa);
   color: white;
