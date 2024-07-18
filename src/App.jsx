@@ -5,6 +5,7 @@ import Footer from './components/Footer.jsx';
 import Homepage from './components/Homepage.jsx';
 import MensClothing from './components/MensClothing.jsx';
 import WomensClothing from './components/WomensClothing.jsx';
+import Shoes from './components/Shoes.jsx';
 import Cart from './components/Cart.jsx';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
@@ -22,6 +23,7 @@ const App = () => {
         <Route exact path="/" element={<Homepage />} />
         <Route path="/mens-clothing" element={<MensClothing cart={cart} setCart={setCart} />} /> 
         <Route path="/womens-clothing" element={<WomensClothing cart={cart} setCart={setCart} />} /> 
+        <Route path="/shoes" element={<Shoes cart={cart} setCart={setCart} />} />
         <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
