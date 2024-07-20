@@ -60,7 +60,7 @@
     "name": "Men's Suit",
     "price": 199.99,
     "size": ["S", "M", "L", "XL"],
-    "color": ["Black", "Gray", "Navy"],
+    "color": ["Black", "Gray", "Navy", "Purple"],
     "image": "/images/men-fashion.jpeg"
   },
   {
