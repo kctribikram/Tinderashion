@@ -25,6 +25,7 @@ const Navbar = () => {
           <Link to="/womens-clothing" onClick={closeMenu}>Women's Clothing</Link>
           <Link to="/contact" onClick={closeMenu}>Contact</Link>
           <Link to="/shoes" onClick={closeMenu}>Shoes</Link>
+          <Link to="/faq" onClick={closeMenu}>Faqs</Link>
         </div>
       </div>
       <div className="navbar-icons">

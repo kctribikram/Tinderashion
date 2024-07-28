@@ -12,6 +12,7 @@ import './App.css';
 import Login from './components/Login.jsx';
 import Signup from './components/Signup.jsx';
 import Contact from './components/Contact.jsx';
+import Faq from './components/Faq.jsx';
 
 const App = () => {
   const [cart, setCart] = useState([]);
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path='/contact' element={<Contact/>} />
+        <Route path='/faq' element={<Faq/>} />
       </Routes>
       <Footer />
     </Router>
