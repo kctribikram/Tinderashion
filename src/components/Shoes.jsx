@@ -1,18 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import { useSwipeable } from 'react-swipeable';
+import axios from 'axios';
 import './Shoes.css';
-import data from '../data/shoes.json';
 import 'rc-slider/assets/index.css';
 import Slider from 'rc-slider';
 
 const Shoes = ({ cart, setCart }) => {
   const [index, setIndex] = useState(0);
-  const [filteredData, setFilteredData] = useState(data);
+  const [filteredData, setFilteredData] = useState([]);
   const [filters, setFilters] = useState({ price: 100, sizes: [], colors: [] });
   const [isFilterOpen, setIsFilterOpen] = useState(false);
 
-  const colors = [...new Set(data.flatMap(product => product.color))];
-  const sizes = [...new Set(data.flatMap(product => product.size))];
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://localhost:5001/api/products?category=shoes');
+        setFilteredData(response.data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  const colors = [...new Set(filteredData.flatMap(product => product.color))];
+  const sizes = [...new Set(filteredData.flatMap(product => product.size))];
 
   const nextProduct = () => {
     setIndex((prevIndex) => (prevIndex + 1) % filteredData.length);
@@ -37,7 +49,7 @@ const Shoes = ({ cart, setCart }) => {
   };
 
   const applyFilters = () => {
-    const filtered = data.filter(product =>
+    const filtered = filteredData.filter(product =>
       (filters.price ? product.price <= filters.price : true) &&
       (filters.sizes.length ? filters.sizes.some(size => product.size.includes(size)) : true) &&
       (filters.colors.length ? filters.colors.some(color => product.color.includes(color)) : true)
@@ -48,7 +60,7 @@ const Shoes = ({ cart, setCart }) => {
 
   const resetFilters = () => {
     setFilters({ price: 100, sizes: [], colors: [] });
-    setFilteredData(data);
+    setFilteredData(filteredData);
     setIndex(0);
   };
 
