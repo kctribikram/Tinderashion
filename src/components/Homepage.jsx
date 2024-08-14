@@ -6,7 +6,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 const Homepage = () => {
   return (
     <>
-      {/* Fully Centered Banner Section */}
+      {/* Banner Section */}
       <div className="banner-section">
         <div className="banner-overlay">
           <div className="container full-height">

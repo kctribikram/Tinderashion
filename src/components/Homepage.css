@@ -1,7 +1,7 @@
-/* Fully Centered Banner Section */
+/*  Banner Section */
 .banner-section {
   position: relative;
-  height: 70vh; /* Keeps the height as requested */
+  height: 70vh; 
   background: url('https://images.pexels.com/photos/972887/pexels-photo-972887.jpeg') center center / cover no-repeat;
   display: flex;
   align-items: center;
@@ -9,7 +9,7 @@
 }
 
 .full-height {
-  height: 100%; /* Ensures the container and row take full height of the banner */
+  height: 100%; 
 }
 
 .banner-overlay {
