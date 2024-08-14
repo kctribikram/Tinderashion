@@ -1,47 +1,134 @@
-.About-us-section{
-    padding: 40px 0;
+/* Fully Centered Banner Section */
+.banner-section {
+  position: relative;
+  height: 70vh; /* Keeps the height as requested */
+  background: url('https://images.pexels.com/photos/972887/pexels-photo-972887.jpeg') center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.About-us-section .row{
-    display: flex;
-    align-items: center;
-}
-.about-home-content h2{
-    font-weight: 600;
-}
-.about-home-content h2{
-    font-weight: 600;
-    color: #FF4500;
-}
-.about-home img {
-    width: 2000px;
-}
-.featured-section{
-    padding: 40px;
-    background-color: rgb(235, 240, 244);
-}
-.featured-section .featured-heading h2{
-    font-weight: 600;
-    text-align: center;
-}
-.featured-section .featured-heading p{
-    font-weight: 600;
-    font-size: 1.25rem;
-    text-align: center;
-    margin-bottom: 30px;
-    color: #FF4500;
-}
-.featured-card{
-    background-color: #ffffff;
-    border-radius: 10px;
-}
-.card-Image {
-    border-radius: 8px 8px 0px 0px;
 
+.full-height {
+  height: 100%; /* Ensures the container and row take full height of the banner */
 }
-.featured-card .card-body{
-    padding: 20px;
-    text-align: center;
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent dark overlay for visibility */
+  z-index: 1;
 }
-.featured-card .card-body h5{
-    font-weight: 600;
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  max-width: 800px;
+  margin: auto; /* Centers the content horizontally */
+}
+
+.banner-content h1 {
+  font-size: 52px; /* Large and bold for emphasis */
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.6); /* Stronger shadow for better contrast */
+  color: #f9f9f9; 
+  animation: fadeIn 1.5s ease-out;
+}
+
+.banner-content p {
+  font-size: 20px;
+  color: #f9f9f9; /* Lighter color for better visibility */
+  margin-bottom: 30px;
+  animation: fadeIn 2s ease-out;
+}
+
+.banner-content .btn-custom {
+  background-color: #FF4500; /* Brighter color for more attention */
+  border-color: #FF4500;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  color: #f9f9f9; /* Darker text on bright button */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  animation: fadeIn 2.5s ease-out;
+}
+
+.banner-content .btn-custom:hover {
+  background-color: #ffaa00; /* Darker on hover */
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Subtle fade-in animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* About Us Section */
+.About-us-section {
+  padding: 60px 0;
+}
+
+.About-us-section .row {
+  display: flex;
+  align-items: center;
+}
+
+.about-home-content h2 {
+  font-weight: 600;
+  color: #FF4500;
+}
+
+.about-home img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.featured-section {
+  padding: 60px;
+  background-color: rgb(235, 240, 244);
+}
+
+.featured-section .featured-heading h2 {
+  font-weight: 600;
+  text-align: center;
+}
+
+.featured-section .featured-heading p {
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #FF4500;
+}
+
+.featured-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.card-Image {
+  border-radius: 8px 8px 0px 0px;
+}
+
+.featured-card .card-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.featured-card .card-body h5 {
+  font-weight: 600;
 }
