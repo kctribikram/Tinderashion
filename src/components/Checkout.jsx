@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Use useNavigate for navigation
+import { useNavigate } from 'react-router-dom';
 import './Checkout.css';
 
 const Checkout = ({ cart = [] }) => {
@@ -10,11 +10,15 @@ const Checkout = ({ cart = [] }) => {
     lastName: '',
     address: '',
     email: '',
-    phone: ''
+    phone: '',
+    cardNumber: '',
+    cardName: '',
+    expiryDate: '',
+    cvv: ''
   });
 
   const [errors, setErrors] = useState({});
-  const navigate = useNavigate(); // Use useNavigate to handle navigation
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -35,6 +39,10 @@ const Checkout = ({ cart = [] }) => {
       newErrors.email = 'Email address is invalid';
     }
     if (!formData.phone) newErrors.phone = 'Phone Number is required';
+    if (!formData.cardNumber) newErrors.cardNumber = 'Card Number is required';
+    if (!formData.cardName) newErrors.cardName = 'Name on Card is required';
+    if (!formData.expiryDate) newErrors.expiryDate = 'Expiry Date is required';
+    if (!formData.cvv) newErrors.cvv = 'CVV is required';
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -44,7 +52,7 @@ const Checkout = ({ cart = [] }) => {
     e.preventDefault();
     if (validateForm()) {
       console.log('Form submitted', formData);
-      navigate('/success'); // Navigate to the success page after form submission
+      navigate('/success');
     } else {
       console.log('Form validation failed');
     }
@@ -63,7 +71,6 @@ const Checkout = ({ cart = [] }) => {
   const estimatedTax = parseFloat(calculateTax());
   const total = (parseFloat(calculateSubtotal()) + estimatedShipping + estimatedTax).toFixed(2);
 
-  // Calculate arrival date 5 days from today
   const arrivalDate = new Date();
   arrivalDate.setDate(arrivalDate.getDate() + 5);
   const arrivalDateString = arrivalDate.toLocaleDateString(undefined, {
@@ -176,6 +183,60 @@ const Checkout = ({ cart = [] }) => {
                   className="input-field half-width"
                 />
                 {errors.phone && <span className="error-text">{errors.phone}</span>}
+              </div>
+            </div>
+
+            <h3 className="section-title">Payment Information</h3>
+            <div className="form-group">
+              <div className="input-wrapper full-width">
+                <input
+                  type="text"
+                  name="cardNumber"
+                  placeholder="Card Number*"
+                  value={formData.cardNumber}
+                  onChange={handleChange}
+                  className="input-field full-width"
+                />
+                {errors.cardNumber && <span className="error-text">{errors.cardNumber}</span>}
+              </div>
+            </div>
+
+            <div className="form-group">
+              <div className="input-wrapper">
+                <input
+                  type="text"
+                  name="cardName"
+                  placeholder="Name on Card*"
+                  value={formData.cardName}
+                  onChange={handleChange}
+                  className="input-field half-width"
+                />
+                {errors.cardName && <span className="error-text">{errors.cardName}</span>}
+              </div>
+              <div className="input-wrapper">
+                <input
+                  type="text"
+                  name="expiryDate"
+                  placeholder="Expiry Date (MM/YY)*"
+                  value={formData.expiryDate}
+                  onChange={handleChange}
+                  className="input-field half-width"
+                />
+                {errors.expiryDate && <span className="error-text">{errors.expiryDate}</span>}
+              </div>
+            </div>
+
+            <div className="form-group">
+              <div className="input-wrapper">
+                <input
+                  type="text"
+                  name="cvv"
+                  placeholder="CVV*"
+                  value={formData.cvv}
+                  onChange={handleChange}
+                  className="input-field half-width"
+                />
+                {errors.cvv && <span className="error-text">{errors.cvv}</span>}
               </div>
             </div>
 
