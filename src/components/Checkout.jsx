@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Use useNavigate for navigation
 import './Checkout.css';
 
-const Checkout = () => {
+const Checkout = ({ cart = [] }) => {
   const [deliveryMethod, setDeliveryMethod] = useState('ship');
   const [addressType, setAddressType] = useState('homeoffice');
   const [formData, setFormData] = useState({
@@ -13,6 +14,7 @@ const Checkout = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const navigate = useNavigate(); // Use useNavigate to handle navigation
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -42,42 +44,34 @@ const Checkout = () => {
     e.preventDefault();
     if (validateForm()) {
       console.log('Form submitted', formData);
-      alert('Proceeding to the next step in checkout');
+      navigate('/success'); // Navigate to the success page after form submission
     } else {
       console.log('Form validation failed');
     }
   };
 
-  const itemsInBag = [
-    {
-      id: 1,
-      name: "Nike SB Logo Skate T-Shirt",
-      imageUrl: "product-image-url",
-      styleNumber: "DQ7817-411",
-      size: "S",
-      color: "Midnight Navy",
-      quantity: 1,
-      price: 35.00,
-    },
-    {
-      id: 2,
-      name: "Nike Air Max 270",
-      imageUrl: "another-product-image-url",
-      styleNumber: "AO2924-002",
-      size: "9",
-      color: "Black/White",
-      quantity: 1,
-      price: 150.00,
-    },
-  ];
-
   const calculateSubtotal = () => {
-    return itemsInBag.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
+    return cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
   };
 
-  const estimatedShipping = 8.00;
-  const estimatedTax = 0.00;
+  const calculateTax = () => {
+    const subtotal = parseFloat(calculateSubtotal());
+    return (subtotal * 0.13).toFixed(2); // Calculate 13% of the subtotal
+  };
+
+  const estimatedShipping = 0.00;
+  const estimatedTax = parseFloat(calculateTax());
   const total = (parseFloat(calculateSubtotal()) + estimatedShipping + estimatedTax).toFixed(2);
+
+  // Calculate arrival date 5 days from today
+  const arrivalDate = new Date();
+  arrivalDate.setDate(arrivalDate.getDate() + 5);
+  const arrivalDateString = arrivalDate.toLocaleDateString(undefined, {
+    weekday: 'short',
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric'
+  });
 
   return (
     <div className="checkout-page">
@@ -195,22 +189,26 @@ const Checkout = () => {
               <p>Estimated Shipping: ${estimatedShipping.toFixed(2)}</p>
               <p>Estimated Tax: ${estimatedTax.toFixed(2)}</p>
               <p>Total: ${total}</p>
-              <p className="delivery-date">Arrives Tue, Jul 5 - Thu, Jul 7</p>
+              <p className="delivery-date">Arrives by {arrivalDateString}</p>
             </div>
 
             <div className="bag-items">
-              {itemsInBag.map(item => (
-                <div key={item.id} className="bag-item">
-                  <img src={item.imageUrl} alt={item.name} className="bag-item-image" />
-                  <div className="bag-item-details">
-                    <p className="bag-item-name">{item.name}</p>
-                    <p className="bag-item-style">Style #: {item.styleNumber}</p>
-                    <p className="bag-item-size">Size: {item.size}</p>
-                    <p className="bag-item-color">Color: {item.color}</p>
-                    <p className="bag-item-quantity">Qty: {item.quantity} @ ${item.price.toFixed(2)}</p>
+              {cart && cart.length > 0 ? (
+                cart.map(item => (
+                  <div key={item.id} className="bag-item">
+                    <img src={item.image} alt={item.name} className="bag-item-image" />
+                    <div className="bag-item-details">
+                      <p className="bag-item-name">{item.name}</p>
+                      <p className="bag-item-style">Style #: {item.styleNumber}</p>
+                      <p className="bag-item-size">Size: {item.size}</p>
+                      <p className="bag-item-color">Color: {item.color}</p>
+                      <p className="bag-item-quantity">Qty: {item.quantity} @ ${item.price.toFixed(2)}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))
+              ) : (
+                <p>Your bag is empty.</p>
+              )}
             </div>
           </div>
         </div>
