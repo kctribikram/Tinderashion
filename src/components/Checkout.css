@@ -24,6 +24,7 @@ body {
 .checkout-content {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
 }
 
 .delivery-options, .order-summary {
@@ -63,6 +64,7 @@ body {
   justify-content: space-between;
   gap: 20px;
   margin-bottom: 20px;
+  flex-wrap: wrap; /* Allows inputs to wrap on smaller screens */
 }
 
 .input-wrapper {
@@ -211,4 +213,66 @@ body {
 .bag-item:last-child {
   border-bottom: 1px solid #ddd;
   padding-bottom: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .checkout-content {
+    flex-direction: column; /* Stack the sections vertically on smaller screens */
+  }
+
+  .delivery-options, .order-summary {
+    width: 100%; /* Full width for each section */
+    margin-bottom: 20px; /* Add space between sections */
+  }
+
+  .method-btn, .address-btn {
+    width: 100%; /* Full width for buttons */
+    margin-bottom: 10px;
+  }
+
+  .form-group {
+    gap: 10px; /* Reduce gap on smaller screens */
+  }
+
+  .input-wrapper.half-width {
+    width: 100%; /* Full width for half-width inputs */
+  }
+
+  .product-summary {
+    flex-direction: column; /* Stack product info vertically */
+    align-items: flex-start;
+  }
+
+  .product-image {
+    margin-bottom: 10px; /* Add margin for stacked layout */
+  }
+
+  .bag-item {
+    flex-direction: column; /* Stack bag item info vertically */
+    align-items: flex-start;
+  }
+
+  .bag-item-image {
+    margin-bottom: 10px; /* Add margin for stacked layout */
+  }
+}
+
+@media (max-width: 480px) {
+  .checkout-title {
+    font-size: 20px; /* Smaller font size for the title */
+  }
+
+  .section-title {
+    font-size: 16px; /* Smaller font size for section titles */
+  }
+
+  .save-continue-btn {
+    font-size: 14px; /* Adjust button font size */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .product-name, .bag-item-name {
+    font-size: 14px; /* Adjust font size for product names */
+  }
 }

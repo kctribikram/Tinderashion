@@ -1,8 +1,8 @@
 // server/server.js
-
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const path = require('path'); // Add this to help with serving static files
 const productRoutes = require('./routes/products');
 
 const app = express();
@@ -10,6 +10,9 @@ const port = 5001;
 
 app.use(cors());
 app.use(express.json());
+
+// Serve static files from the "public" directory
+app.use(express.static(path.join(__dirname, 'public')));
 
 const uri = 'mongodb+srv://ziadarshad51:ziad@cluster0.gpjbwp9.mongodb.net/tinderashion';
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
