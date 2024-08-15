@@ -218,61 +218,61 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
   .checkout-content {
-    flex-direction: column; /* Stack the sections vertically on smaller screens */
+    flex-direction: column; 
   }
 
   .delivery-options, .order-summary {
-    width: 100%; /* Full width for each section */
-    margin-bottom: 20px; /* Add space between sections */
+    width: 100%; 
+    margin-bottom: 20px; 
   }
 
   .method-btn, .address-btn {
-    width: 100%; /* Full width for buttons */
+    width: 100%; 
     margin-bottom: 10px;
   }
 
   .form-group {
-    gap: 10px; /* Reduce gap on smaller screens */
+    gap: 10px;
   }
 
   .input-wrapper.half-width {
-    width: 100%; /* Full width for half-width inputs */
+    width: 100%; 
   }
 
   .product-summary {
-    flex-direction: column; /* Stack product info vertically */
+    flex-direction: column; 
     align-items: flex-start;
   }
 
   .product-image {
-    margin-bottom: 10px; /* Add margin for stacked layout */
+    margin-bottom: 10px; 
   }
 
   .bag-item {
-    flex-direction: column; /* Stack bag item info vertically */
+    flex-direction: column; 
     align-items: flex-start;
   }
 
   .bag-item-image {
-    margin-bottom: 10px; /* Add margin for stacked layout */
+    margin-bottom: 10px; 
   }
 }
 
 @media (max-width: 480px) {
   .checkout-title {
-    font-size: 20px; /* Smaller font size for the title */
+    font-size: 20px; 
   }
 
   .section-title {
-    font-size: 16px; /* Smaller font size for section titles */
+    font-size: 16px; 
   }
 
   .save-continue-btn {
-    font-size: 14px; /* Adjust button font size */
-    padding: 10px; /* Adjust padding for smaller screens */
+    font-size: 14px;
+    padding: 10px; 
   }
 
   .product-name, .bag-item-name {
-    font-size: 14px; /* Adjust font size for product names */
+    font-size: 14px; 
   }
 }
