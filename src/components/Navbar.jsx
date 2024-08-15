@@ -29,8 +29,8 @@ const Navbar = () => {
         </div>
       </div>
       <div className="navbar-icons">
-        <Link to="/search" className="icon search-icon" onClick={closeMenu}>🔍</Link>
-        <Link to="/profile" className="icon profile-icon" onClick={closeMenu}>👤</Link>
+        {/* <Link to="/search" className="icon search-icon" onClick={closeMenu}>🔍</Link>
+        <Link to="/profile" className="icon profile-icon" onClick={closeMenu}>👤</Link> */}
         <Link to="/cart" className="icon cart-icon" onClick={closeMenu}>🛒</Link>
       </div>
       <div className="hamburger" onClick={toggleMenu}>

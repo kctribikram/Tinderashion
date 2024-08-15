@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useSwipeable } from 'react-swipeable';
 import axios from 'axios';
 import './Shoes.css';
@@ -129,8 +130,10 @@ const Shoes = ({ cart, setCart }) => {
         <div className="product-section">
           {filteredData.length > 0 && (
             <div className="product-card" {...handlers}>
-              <img src={filteredData[index].image} alt={filteredData[index].name} />
-              <h2>{filteredData[index].name}</h2>
+              <Link to={`/product/${filteredData[index]._id}`}>
+                <img src={filteredData[index].image} alt={filteredData[index].name} />
+                <h2>{filteredData[index].name}</h2>
+              </Link>
               <p>Price: ${filteredData[index].price}</p>
               <p>Size: {filteredData[index].size.join(', ')}</p>
               <p>Colors: {filteredData[index].color.join(', ')}</p>
